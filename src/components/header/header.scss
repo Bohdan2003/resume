@@ -19,21 +19,18 @@
     &__list{
         display: flex;
     }
-    &__item{
-        padding: 10px 16px;
-        border: 1px solid $white;
-        border-radius: 43px;
-        position: relative;
-    }
     &__item + &__item{
+        position: relative;
         margin-left: 60px; 
         &::before{
             content:"/";
+            opacity: .5;
             position: absolute;
+            top: 12px;
             left: -36px;
         }
     }
     &__link{
-        color: $white;
+        @extend %link;
     }
 }

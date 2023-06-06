@@ -1,22 +1,29 @@
 @import "./vars";
 
 html,
-body{
+body,
+#root{
    height: 100%;
+}
+
+*{
+    line-height: 110%;
+}
+
+body{
+    background-color: $bg;
+    @extend %raleway-300;
+    font-size: 20px;
+    color: $white;   
+}
+
+#root{  
+    display: flex;
+    flex-direction: column;
 }
 
 .main{
     flex-grow: 1 ;
-}
-
-body{
-    @extend %raleway-300;
-    line-height: 110%;
-    font-size: 20px;
-    color: $white;
-    background-color: $bg;
-    display: flex;
-    flex-direction: column;
 }
 
 .container{

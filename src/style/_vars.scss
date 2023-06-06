@@ -1,4 +1,4 @@
-@import "./_fonts.scss";
+@import "./fonts";
 $bg: #050505;
 $white: #fff;
 
@@ -11,3 +11,25 @@ $white: #fff;
     font-family: "PoiretOne-Regular";
     font-weight: 400;
 } 
+
+%title{
+    font-size: 234px;
+    @extend %poiret-400;
+    margin-bottom: 120px;
+}
+
+%link{
+    display: block;
+    color: $white;
+    padding: 10px 16px;
+    border: 1px solid $white;
+    border-radius: 43px;
+}
+
+%big-link{
+    border: 1px solid $white;
+    border-radius: 100px;
+    display: block;
+    color: $white;
+    padding: 16px 216px 78px 50px;
+}

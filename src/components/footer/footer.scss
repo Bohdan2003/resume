@@ -1,0 +1,39 @@
+@import "../../style/vars";
+
+.footer{
+    &__title{
+        @extend %title;
+    }
+    &__columns{
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 160px;
+    }
+    &__column{
+        margin-right: 160px;
+    }
+    &__social-link{
+        @extend %big-link;        
+        margin-bottom: 120px;
+    }
+    &__text{
+        margin-bottom: 10px;
+        opacity: .5;
+    }
+    &__link{
+        color: $white;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+    }
+    &__decor{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center; 
+        margin-bottom: 50px;
+        margin-right: 770px;
+        span{
+            display: inline-block;
+            margin-right: 20px;
+            font-size: 32px;
+        }
+    }
+}
