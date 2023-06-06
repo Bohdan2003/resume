@@ -1,0 +1,26 @@
+@import "./vars";
+
+html,
+body{
+   height: 100%;
+}
+
+.main{
+    flex-grow: 1 ;
+}
+
+body{
+    @extend %raleway-300;
+    line-height: 110%;
+    font-size: 20px;
+    color: $white;
+    background-color: $bg;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    max-width: 1720px;
+    padding: 0 20px;
+    margin: 0 auto;
+}

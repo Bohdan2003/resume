@@ -1,0 +1,39 @@
+@import "../../style/vars";
+
+.header{
+    &__inner{
+        padding: 40px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo{
+    @extend %poiret-400;
+    text-transform: uppercase;
+    font-size: 32px;
+}
+
+.menu{
+    &__list{
+        display: flex;
+    }
+    &__item{
+        padding: 10px 16px;
+        border: 1px solid $white;
+        border-radius: 43px;
+        position: relative;
+    }
+    &__item + &__item{
+        margin-left: 60px; 
+        &::before{
+            content:"/";
+            position: absolute;
+            left: -36px;
+        }
+    }
+    &__link{
+        color: $white;
+    }
+}
