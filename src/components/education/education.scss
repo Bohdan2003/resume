@@ -1,0 +1,36 @@
+@import "../../style/vars";
+
+.education{
+    @extend %section;
+    &__inner{
+        padding: 40px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        column-gap: 20px;
+    }
+    &__title{
+        grid-column: 2 / 4; 
+        margin-bottom: 8vh;
+        font-weight: light;
+        font-size: 64px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__list{
+        grid-column: 2 / 4;
+    }
+    &__item{
+        padding: 4vh 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        border-bottom: $white 1px solid;
+        align-items: center;
+    }
+    &__term{
+        word-spacing: 20px;
+        font-size: 32px;
+        @extend %poiret-400;
+    }
+}

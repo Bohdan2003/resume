@@ -18,8 +18,8 @@ export const Header = ({slideTo}) => {
                     <nav className="menu">
                         <ul className="menu__list">
                             <MenuItem text="About me" scroll={() => {slideTo(2)}}/>
-                            <MenuItem text="Projects" scroll={() => {slideTo(3)}}/>
-                            <MenuItem text="Contacts" scroll={() => {slideTo(4)}}/>
+                            <MenuItem text="Projects" scroll={() => {slideTo(5)}}/>
+                            <MenuItem text="Contacts" scroll={() => {slideTo(6)}}/>
                         </ul>
                     </nav>
                 </div>

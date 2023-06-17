@@ -6,6 +6,7 @@ import { Header } from "../header/Header"
 import { Footer } from "../footer/Footer"
 import { Intro } from "../intro/Intro"
 import { AboutMe } from "../aboutMe/AboutMe"
+import { Education } from "../education/Education";
 import { Skills } from "../skills/Skills";
 
 import "swiper/css";
@@ -33,6 +34,9 @@ export const App = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <AboutMe/> 
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Education/> 
                 </SwiperSlide>
                 <SwiperSlide>
                     <Skills/> 
