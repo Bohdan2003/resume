@@ -1,12 +1,15 @@
 import "./header.scss";
 
-const MenuItem = ({link = "#", text}) => (
-    <li className="menu__item">
+const MenuItem = ({link = "#", text, scroll}) => (
+    <li className="menu__item" onClick={e => {
+        e.preventDefault();
+        scroll();
+    }}>
         <a className="menu__link" href={link}>{text}</a>
     </li>
 )
 
-export const Header = () => {
+export const Header = ({slideTo}) => {
     return (
         <header className="header">
             <div className="container">
@@ -14,9 +17,9 @@ export const Header = () => {
                     <div className="logo">resume</div>
                     <nav className="menu">
                         <ul className="menu__list">
-                            <MenuItem text="About me"/>
-                            <MenuItem text="Projects"/>
-                            <MenuItem text="Contacts"/>
+                            <MenuItem text="About me" scroll={() => {slideTo(2)}}/>
+                            <MenuItem text="Projects" scroll={() => {slideTo(3)}}/>
+                            <MenuItem text="Contacts" scroll={() => {slideTo(4)}}/>
                         </ul>
                     </nav>
                 </div>

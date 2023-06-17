@@ -1,18 +1,29 @@
 @import "../../style/vars";
 
 .footer{
+    &__inner{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr auto;
+        column-gap: 20px;
+        padding: 40px 0;
+    }
     &__title{
+        grid-column: span 3;
         @extend %title;
     }
-    &__columns{
-        display: flex;
-        justify-content: flex-end;
-        margin-bottom: 160px;
-    }
     &__column{
-        margin-right: 160px;
+        grid-row-start: 2;      
+    }
+    .first-column{
+        grid-column: 2;
+    }
+    .second-column{
+        grid-column: 3;
     }
     &__social-link{
+        display: inline-block;
         @extend %big-link;        
         margin-bottom: 120px;
     }
@@ -22,14 +33,11 @@
     }
     &__link{
         color: $white;
-        font-feature-settings: 'pnum' on, 'lnum' on;
     }
     &__decor{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center; 
-        margin-bottom: 50px;
-        margin-right: 770px;
+        grid-column-start: 2;
+        grid-row-start: 3;
+        align-self: flex-end;
         span{
             display: inline-block;
             margin-right: 20px;

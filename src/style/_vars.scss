@@ -1,6 +1,6 @@
 @import "./fonts";
-$bg: #050505;
-$white: #fff;
+$bg: #141414;
+$white: #ffffffd0;
 
 %raleway-300{
     font-family: "Raleway-Light";
@@ -12,10 +12,16 @@ $white: #fff;
     font-weight: 400;
 } 
 
+%section{
+    height: 100vh;    
+    display: grid;
+    align-items: center;
+}
+
 %title{
+    text-transform: uppercase;
     font-size: 234px;
     @extend %poiret-400;
-    margin-bottom: 120px;
 }
 
 %link{
