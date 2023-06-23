@@ -1,0 +1,89 @@
+@import "vars";
+
+.appearanceOnLeft{
+    animation: appearance-on-left 1.5s;
+}
+
+.appearanceOnRight{
+    animation: appearance-on-right 1.5s;
+}
+
+.education__list--animation{
+    @for $i from 1 through 4 {
+        li:nth-child(#{$i}) {
+            &::after{
+                transition: all .25s #{$i / 4}s;
+                bottom: 0;
+                opacity: 1;
+            }
+            .education__text,
+            .education__term{
+                transition: all .5s #{$i / 4}s;
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+}
+
+.projects-item--animation{
+    .projects-item__link{
+        transition: all 1.5s 1.5s;
+        opacity: 1;   
+    }
+    .projects-item__img{
+        transition: all 1.5s 1.5s;
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .projects-item__title{
+        transition: all 1.5s 1.5s;
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .projects-item__tags{
+        transition: all 1.5s 1.5s;
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .projects-item__text{    
+        span{
+            transition: all 1.5s 1.5s;
+            transform: translateX(0);
+            opacity: 1;
+        } 
+        &::before,
+        &::after{
+            transition: all 1.5s 1s;
+            opacity: 1;
+        }  
+        &::before{
+            top: 0px;
+        }
+        &::after{
+            bottom: 0px;
+        }
+    }
+}
+
+@keyframes appearance-on-left {
+    0% {
+      transform: translateX(-20%);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+@keyframes appearance-on-right {
+    0% {
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

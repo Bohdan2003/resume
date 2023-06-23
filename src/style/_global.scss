@@ -8,7 +8,7 @@ body{
     font-feature-settings: 'pnum' on, 'lnum' on;
     background-color: $bg;
     @extend %raleway-300;
-    font-size: 20px;
+    font-size: 1.2vw;
     color: $white;   
     height: 100vh;
 }

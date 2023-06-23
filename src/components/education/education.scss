@@ -25,10 +25,29 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 20px;
-        border-bottom: $white 1px solid;
+        position: relative;
+        // border-bottom: $white 1px solid;
         align-items: center;
+        &::after{
+            content: '';
+            position: absolute;
+            height: 1px;
+            background-color: $white;
+            width: 100%;
+            right: 0;
+            // transform: translateY(20%);
+            // transition: all .5s;
+            bottom: 80px;
+            opacity: 0;
+        }
+    } 
+    .education__text{
+        transform: translateY(-30%);
+        opacity: 0;
     }
     &__term{
+        transform: translateY(-30%);
+        opacity: 0;
         word-spacing: 20px;
         font-size: 32px;
         @extend %poiret-400;

@@ -2,7 +2,7 @@ import "./footer.scss"
 
 const Column = ({nameClass, socialLink = "#", socialText, text, contactLink, contactText}) => (
     <li className={`footer__column ${nameClass}`}>
-        <a className="footer__social-link" href={socialLink}>{socialText}</a>
+        <a className="footer__social-link" target="_blanc" href={socialLink}>{socialText}</a>
         <div className="footer__text">{text}</div>
         <a className="footer__link" href={contactLink}>{contactText}</a>
     </li>

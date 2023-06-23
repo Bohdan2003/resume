@@ -5,7 +5,7 @@
     src: local('Raleway-Light'),
         url('../fonts/Raleway-Light.woff2') format('woff2'),
         url('../fonts/Raleway-Light.woff') format('woff');
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -15,5 +15,5 @@
     src: local('PoiretOne-Regular'),
         url('../fonts/PoiretOne-Regular.woff2') format('woff2'),
         url('../fonts/PoiretOne-Regular.woff') format('woff');
-    font-display: swap;
+    font-display: block;
 }

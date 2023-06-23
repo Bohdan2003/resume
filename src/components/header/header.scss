@@ -12,11 +12,10 @@
 .logo{
     @extend %poiret-400;
     text-transform: uppercase;
-    font-size: 32px;
+    font-size: 1.8vw;
 }
 
 .menu{
-    padding-right: 40px;
     &__list{
         display: flex;
     }
@@ -34,4 +33,8 @@
     &__link{
         @extend %link;
     }
+}
+
+@media(max-width:1500px){
+
 }
