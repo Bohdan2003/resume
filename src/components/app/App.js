@@ -54,15 +54,15 @@ export const App = () => {
                 <SwiperSlide>
                     <Animate Component={Education}/>
                 </SwiperSlide>
-                {/* <SwiperSlide>
+                <SwiperSlide>
                     <Animate Component={Skills}/>
-                </SwiperSlide> */}
-                {/* <SwiperSlide>
+                </SwiperSlide>
+                <SwiperSlide>
                     <Animate Component={Projects}/>
-                </SwiperSlide> */}
-                {/* <SwiperSlide>
-                    <Footer/>   
-                </SwiperSlide>            */}
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Animate Component={Footer}/>
+                </SwiperSlide>           
             </Swiper>
             <div className="pagination"></div>
        </>

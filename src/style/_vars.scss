@@ -13,15 +13,35 @@ $white: #ffffffd0;
 } 
 
 %section{
-    height: 100vh;    
+    max-width: 94vw;
+    padding: 40px 20px;
+    // height: 100vh;    
     display: grid;
+    margin: 0 auto;
     align-items: center;
+}
+
+%section-inner{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
 }
 
 %title{
     text-transform: uppercase;
-    font-size: 12vw;
-    line-height: 75%;
+    font-size: 12.8vw;
+    // font-size: 13.5vw;
+    line-height: 90%;
+    @extend %poiret-400;
+}
+
+%subtitle{
+    font-size: 64px;   
+    margin-bottom: 8vh;
+}
+
+%big-text{
+    font-size: 32px;
     @extend %poiret-400;
 }
 
@@ -29,15 +49,81 @@ $white: #ffffffd0;
     display: block;
     color: $white;
     padding: 1vh 1vw;
-    // padding: 10px 16px;
     border: 1px solid $white;
     border-radius: 43px;
 }
 
-%big-link{
-    border: 1px solid $white;
-    border-radius: 100px;
-    display: block;
-    color: $white;
-    padding: 16px 216px 78px 50px;
-} 
+@media(min-width:1920px){
+    %title{
+        font-size: 235px;
+    }
+}
+
+@media(max-width:1800px){
+    %title{
+        font-size: 12.7vw;
+    }
+}
+
+@media(max-width:1700px){
+    %title{
+        font-size: 12.6vw;
+    }
+}
+
+@media(max-width:1500px){
+    %subtitle{
+        font-size: 42px;
+    }
+    %big-text{
+        font-size: 26px;
+    }
+}
+
+@media(max-width:1300px){ 
+    %subtitle{
+        font-size: 36px;
+    }
+    %big-text{
+        font-size: 22px;
+    }
+    %link{
+        padding: .7vh .7vw;
+    }
+}
+
+@media(max-width:1000px){ 
+    %title{
+        font-size: 18vw;
+    }
+    %big-text{
+        font-size: 20px;
+    }
+    %link{
+        padding: .7vh .7vw;
+    }
+}
+
+@media(max-width:800px){ 
+    %section-inner{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:700px){ 
+    %section{
+        padding: 20px 20px 60px 20px;
+    }
+    %subtitle{
+        font-size: 30px;
+    }
+}
+
+@media(max-width:560px){ 
+    %title{
+        font-size: 16vw;
+    }
+    %big-text{
+        font-size: 18px;
+    }
+}

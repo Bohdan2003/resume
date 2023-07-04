@@ -1,40 +1,105 @@
 @import "../../style/vars";
 
 .header{
-    padding: 40px 0;
+    @extend %section;
+    padding: 0 20px;
+    min-height: 12vh;
     &__inner{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 20px;
+        align-items: center
     }
 }
 
 .logo{
-    @extend %poiret-400;
+    @extend %big-text;
     text-transform: uppercase;
-    font-size: 1.8vw;
 }
 
 .menu{
+    grid-column: 3;
     &__list{
         display: flex;
-    }
-    &__item + &__item{
+    }   
+    &__item{
+        padding: 0 2vw;
         position: relative;
-        margin-left: 60px; 
         &::before{
             content:"/";
             opacity: .5;
             position: absolute;
-            top: 12px;
-            left: -36px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -5px;
         }
+    }
+    &__item:first-child{
+        padding-left: 0;
+        &::before{
+           display: none;
+        }
+    }
+    &__item:last-child{
+        padding-right: 0;
     }
     &__link{
         @extend %link;
     }
 }
 
-@media(max-width:1500px){
+@media(max-width:1600px){
+    .menu{
+        &__item{
+            padding: 0 1vw;
+            position: relative;
+        }
+    }
+}   
+@media(max-width:1000px){
+    .header{
+        &__inner{
+            align-items: flex-start;
+        }
+    }
+    .menu{
+        width: 100%;
+        &__list{
+            display: block;
+        }
+        &__item{
+            padding: 0;
+            &::before{
+                display: none;
+            }
+        }
+        &__item + &__item{
+            margin-top: 10px;
+        }
+        &__link{
+            border: none;
+            padding: 0;
+        }
+    }
+    .burger-menu{
+        display: block;
+    }
+}   
 
+@media(max-width:800px){
+    .header{
+        &__inner{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .menu{
+        grid-column: 2;
+    }
 }
+
+
+
+
+
+

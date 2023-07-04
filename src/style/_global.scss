@@ -8,7 +8,7 @@ body{
     font-feature-settings: 'pnum' on, 'lnum' on;
     background-color: $bg;
     @extend %raleway-300;
-    font-size: 1.2vw;
+    font-size: 20px;
     color: $white;   
     height: 100vh;
 }
@@ -17,8 +17,14 @@ body{
     height: 100vh;
 }
 
-.container{
-    max-width: 1720px;
-    padding: 0 20px;
-    margin: 0 auto;
+@media(max-width:1500px){
+    body{
+        font-size: 18px;
+    }
+}
+
+@media(max-width:1300px){
+    body{
+        font-size: 16px;
+    }
 }

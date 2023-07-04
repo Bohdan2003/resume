@@ -4,7 +4,7 @@ import "./aboutMe.scss"
 
 export const AboutMe = memo(({animate}) => {
     return (
-        <section className="about-me container">
+        <section className="about-me">
             <div className="about-me__inner">
                 <h2 className="about-me__title">
                     about me

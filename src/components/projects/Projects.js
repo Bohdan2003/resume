@@ -6,7 +6,7 @@ import img from "../../assets/project1.jpg";
 
 export const Projects = memo(({animate}) => {
     return (
-        <section className="projects container">
+        <section className="projects">
             <div className="projects__inner">
                 <h3 className="projects__title">projects</h3>
                 <a className="projects__link" target="_blanc" href="https://github.com/Bohdan2003">my GitHub</a>
@@ -16,7 +16,6 @@ export const Projects = memo(({animate}) => {
                     <div className="projects-item__title">Новостной сайт</div>
                     <ul className="projects-item__tags">
                         <li className="projects-item__tag">#React</li>
-                        <li className="projects-item__tag">#SCSS</li>
                         <li className="projects-item__tag">#Express</li>
                         <li className="projects-item__tag">#MongoDB</li>
                     </ul>

@@ -3,16 +3,13 @@
 .skills{
     @extend %section;
     &__inner{
-        padding: 40px 0;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        @extend %section-inner;
         grid-template-rows: auto auto;
-        column-gap: 20px;
     }
     &__title{
+        @extend %subtitle;
         grid-column: 2 / 4; 
-        margin-bottom: 9vh;
-        font-size: 64px;
+        margin-bottom: 8vh;
         display: flex;
         justify-content: space-between;
     }
@@ -33,8 +30,7 @@
     }
     &__item-title,
     &__advance{
-        font-size: 32px;
-        @extend %poiret-400;
+        @extend %big-text;
     }
     &__advance{
         grid-column: 2; 
@@ -43,5 +39,29 @@
         grid-column: 1 / 3; 
         grid-row: 2;
         max-width:470px
+    }
+}
+
+@media(max-width:800px){
+    .skills{
+        &__title,
+        &__list{
+            grid-column: 1 / 3; 
+        }
+    }
+}
+
+@media(max-width:600px){
+    .skills{
+        &__inner{
+            grid-template-rows: auto 1fr;
+        }
+        &__list{
+            height: 80vh;
+            grid-template-columns: 1fr;
+        }
+        &__item{
+            row-gap: 2vh;
+        }
     }
 }
