@@ -22,7 +22,7 @@ export const Header = ({slideTo}) => {
                 <nav className="menu">
                     <ul className="menu__list" ref={menuListRef}>
                         <MenuItem text="About me" scroll={() => {slideTo(2)}}/>
-                        <MenuItem text="Projects" scroll={() => {slideTo(5)}}/>
+                        <MenuItem text="Project" scroll={() => {slideTo(5)}}/>
                         <MenuItem text="Contacts" scroll={() => {slideTo(6)}}/>
                     </ul>
                 </nav>
